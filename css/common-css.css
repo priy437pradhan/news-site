@@ -1,0 +1,10 @@
+.img-container-hm span{
+    position: absolute;
+    right: 10px;
+    bottom: -195px;
+    color: #fff;
+    background-color: #555555c2;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 14px;
+}
