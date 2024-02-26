@@ -8,6 +8,10 @@
          * {
          list-style-type: none;
          }
+         a{
+            color: #000;
+            text-decoration: none;
+         }
          body {
          margin: 0;
          padding: 0;
@@ -154,10 +158,11 @@
          position: relative;
          }
          h3.headline-container-TO {
-         font-size: 18px;
+         font-size: 22px;
          color: #333;
-         line-height: 28px;
-         padding-right:160px;
+         line-height: 32px;
+         padding-right:170px;
+         font-weight: 600;
          }
          
          .img-container-TO {
@@ -194,6 +199,11 @@
          }
          /* type-one-news  */
          /* type-two-news */
+         .type-two-news {
+         padding: 10px;
+         border-bottom:1px solid #A8A8A8;
+
+         }
          .two-news-img{
          position: relative;
          border-bottom:1px solid #A8A8A8;
@@ -205,9 +215,23 @@
          color: #000;
          line-height: 28px;
          margin:2px;
-         border-bottom:1px solid #A8A8A8;
+         font-weight: 600;
+         position: relative;
+         margin-bottom: 10px;
          }
-         
+         p.headline-container-TW:not(:last-child)::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: "";
+  height: 0.5px;
+  width: 100%;
+  background: #b4b1b1;
+}
+
+.type-two-news-list:last-child p.headline-container-TW::after {
+  display: none;
+}
          .img-container-TW {
          position: absolute;
          right: 0;
@@ -264,10 +288,13 @@
    </head>
    <body>
       <section class="navbar-hm">
+         <a href="#">
          <img src="https://odishatv.in/commondir/images/logo.svg" class="main-logo-img" alt="OdishaTV" title="OdishaTV" style="width: 250px; height: 65px;">
+      </a>
          <ul class="more-icons-hm">
-            <li>dd</li>
-            <li>dd</li>
+            <li><a href="#">dd</a></li>
+            <li><a href="#">dd</a></li>
+            
          </ul>
       </section>
       <section class="flex-menu-container">
@@ -277,43 +304,49 @@
          <ul class="scrolling-menu">
             <li>
                <img src="path/to/image1.jpg">
+               <a href="#">
                Item 1
+               </a>
             </li>
             <li>
                <img src="path/to/image1.jpg">
+               <a href="#">
                Item 1
+               </a>
             </li>
             <li>
-               <img src="path/to/image2.jpg">
-               Item 2
+               <img src="path/to/image1.jpg">
+               <a href="#">
+               Item 1
+               </a>
             </li>
             <li>
-               <img src="path/to/image2.jpg">
-               Item 2
+               <img src="path/to/image1.jpg">
+               <a href="#">
+               Item 1
+               </a>
             </li>
             <li>
-               <img src="path/to/image2.jpg">
-               Item 2
+               <img src="path/to/image1.jpg">
+               <a href="#">
+               Item 1
+               </a>
             </li>
             <li>
-               <img src="path/to/image2.jpg">
-               Item 2
+               <img src="path/to/image1.jpg">
+               <a href="#">
+               Item 1
+               </a>
             </li>
-            <li>
-               <img src="path/to/image2.jpg">
-               Item 2
-            </li>
-            <li>
-               <img src="path/to/image2.jpg">
-               Item 2
-            </li>
+            
          </ul>
       </section>
       <section class="head-news">
-         <h1 class="headline-container"> <a href="#" class="live-button">Live</a> Lorem ipsum dolor sit amet tetur adipi elit. Exercitationem aliquam sunt eum, fugiat henderit id aperiam.</h1>
+         <h1 class="headline-container"> <a href="#" class="live-button">Live</a> <a href="#">Lorem ipsum dolor sit amet tetur adipi elit. Exercitationem aliquam sunt eum, fugiat henderit id aperiam.</a> </h1>
          <div class="img-container-hm">
-            <img src="images/default.jpg" alt="" class="headline-container-img">
-            <img src="images/video-icon-red.svg" alt="" class="play-icon-hm">
+            <a href="#">
+            <img src="images/default.jpg" alt="" class="headline-container-img"></a>
+            <a href="#"><img src="images/video-icon-red.svg" alt="" class="play-icon-hm"></a>
             <span>11:30</span>
          </div>
          <div class="container-element">
@@ -330,13 +363,16 @@
             </ul>
          </div>
       </section>
-      <!-- type-one-news -->
       <div class="type-one-news">
          <div class="one-news-img">
-            <h3 class="headline-container-TO">  Lorem ipsum dolor sit amet tetur adipi elit. Exercitationem aliquam sunt eum, fugiat henderit id aperiam.</h3>
+            <h3 class="headline-container-TO"><a href="#">Lorem ipsum dolor sit amet tetur adipi elit. Exercitationem aliquam sunt eum, fugiat henderit id aperiam.</a>  </h3>
             <div class="img-container-TO">
+               <a href="#">
                <img src="images/default.jpg" alt="" class="headline-container-img">
+               </a>
+               <a href="#">
                <img src="images/video-icon-red.svg" alt="" class="play-icon-TO">
+                </a>
                <span>11:30</span>
             </div>
          </div>
@@ -354,12 +390,17 @@
             </ul>
          </div>
       </div>
+      </section>
       <div class="type-one-news">
          <div class="one-news-img">
-            <h3 class="headline-container-TO"> <a href="#" class="live-button">Live</a> Lorem ipsum dolor sit amet tetur adipi elit. Exercitationem aliquam sunt eum, fugiat henderit id aperiam.</h3>
+            <h3 class="headline-container-TO"><a href="#">Lorem ipsum dolor sit amet tetur adipi elit. Exercitationem aliquam sunt eum, fugiat henderit id aperiam.</a>  </h3>
             <div class="img-container-TO">
+               <a href="#">
                <img src="images/default.jpg" alt="" class="headline-container-img">
+               </a>
+               <a href="#">
                <img src="images/video-icon-red.svg" alt="" class="play-icon-TO">
+                </a>
                <span>11:30</span>
             </div>
          </div>
@@ -377,12 +418,17 @@
             </ul>
          </div>
       </div>
+      </section>
       <div class="type-one-news">
          <div class="one-news-img">
-            <h3 class="headline-container-TO">  Lorem ipsum dolor sit amet tetur adipi elit. Exercitationem aliquam sunt eum, fugiat henderit id aperiam.</h3>
+            <h3 class="headline-container-TO"><a href="#">Lorem ipsum dolor sit amet tetur adipi elit. Exercitationem aliquam sunt eum, fugiat henderit id aperiam.</a>  </h3>
             <div class="img-container-TO">
+               <a href="#">
                <img src="images/default.jpg" alt="" class="headline-container-img">
+               </a>
+               <a href="#">
                <img src="images/video-icon-red.svg" alt="" class="play-icon-TO">
+                </a>
                <span>11:30</span>
             </div>
          </div>
@@ -400,12 +446,17 @@
             </ul>
          </div>
       </div>
+      </section>
       <div class="type-one-news">
          <div class="one-news-img">
-            <h3 class="headline-container-TO">  Lorem ipsum dolor sit amet tetur adipi elit. Exercitationem aliquam sunt eum, fugiat henderit id aperiam.</h3>
+            <h3 class="headline-container-TO"><a href="#">Lorem ipsum dolor sit amet tetur adipi elit. Exercitationem aliquam sunt eum, fugiat henderit id aperiam.</a>  </h3>
             <div class="img-container-TO">
+               <a href="#">
                <img src="images/default.jpg" alt="" class="headline-container-img">
+               </a>
+               <a href="#">
                <img src="images/video-icon-red.svg" alt="" class="play-icon-TO">
+                </a>
                <span>11:30</span>
             </div>
          </div>
@@ -423,12 +474,17 @@
             </ul>
          </div>
       </div>
+      </section>
       <div class="type-one-news">
          <div class="one-news-img">
-            <h3 class="headline-container-TO">  Lorem ipsum dolor sit amet tetur adipi elit. Exercitationem aliquam sunt eum, fugiat henderit id aperiam.</h3>
+            <h3 class="headline-container-TO"><a href="#">Lorem ipsum dolor sit amet tetur adipi elit. Exercitationem aliquam sunt eum, fugiat henderit id aperiam.</a>  </h3>
             <div class="img-container-TO">
+               <a href="#">
                <img src="images/default.jpg" alt="" class="headline-container-img">
+               </a>
+               <a href="#">
                <img src="images/video-icon-red.svg" alt="" class="play-icon-TO">
+                </a>
                <span>11:30</span>
             </div>
          </div>
@@ -446,32 +502,10 @@
             </ul>
          </div>
       </div>
-      <div class="type-one-news">
-         <div class="one-news-img">
-            <h3 class="headline-container-TO">  Lorem ipsum dolor sit amet tetur adipi elit. Exercitationem aliquam sunt eum, fugiat henderit id aperiam.</h3>
-            <div class="img-container-TO">
-               <img src="images/default.jpg" alt="" class="headline-container-img">
-               <img src="images/video-icon-red.svg" alt="" class="play-icon-TO">
-               <span>11:30</span>
-            </div>
-         </div>
-         <div class="container-element">
-            <p class="left-element">INDIA</p>
-            <ul class="right-element">
-               <li>
-                  <img src="path/to/image2.jpg">
-                  save
-               </li>
-               <li>
-                  <img src="path/to/image2.jpg">
-                  share
-               </li>
-            </ul>
-         </div>
-      </div>
+      
       <!-- type-one-news -->
       <!-- type-two-news -->
-      <div class="type-one-news">
+      <div class="type-two-news">
         <h2>Education</h2>
          <div class="two-news-img">
             <h3 class="headline-container-TO"> Lorem ipsum dolor sit amet tetur adipi elit. Exercitationem aliquam sunt eum, fugiat henderit id aperiam.</h3>
@@ -480,10 +514,11 @@
               
             </div>
          </div>
+         <div class="type-two-news-list">
             <p class="headline-container-TW"> Lorem ipsum dolor sit amet tetur adipi elit. Exercitationem aliquam sunt eum, fugiat henderit id aperiam.</p>
             <p class="headline-container-TW"> Lorem ipsum dolor sit amet tetur adipi elit. Exercitationem aliquam sunt eum, fugiat henderit id aperiam.</p>
             <p class="headline-container-TW"> Lorem ipsum dolor sit amet  Exercitationem aliquam sunt eum, fugiat henderit id aperiam.</p>
-           
+         </div>
          
 
          <div class="container-element">
