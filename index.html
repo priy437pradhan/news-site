@@ -18,6 +18,7 @@
          font-family: "Roboto", sans-serif;
          background-color: #f6f3f3;
          }
+         /* navbar-hm */
          section.navbar-hm {
          display: flex;
          justify-content: space-around;
@@ -37,6 +38,8 @@
          ul.more-icons-hm li {
          display: inline-block;
          }
+         /* navbar-hm */
+         /* flex-menu-container */
          .flex-menu-container {
          display: flex;
          background-color: #fff;
@@ -69,6 +72,7 @@
          margin-right: 5px;
          border-radius: 50%;
          }
+         /* flex-menu-container */
          /* live-section */
          .head-news {
          padding: 10px;
@@ -126,7 +130,7 @@
          .container-element {
          display: flex;
          justify-content: space-between;
-         padding: 10px;
+         padding: 4px 2px;
          border-radius: 10px;
          }
          p.left-element  {
@@ -153,38 +157,44 @@
          /* live-section */
          /* type-one-news  */
          .type-one-news {
-         padding: 10px;
+         padding: 6px 4px 4px 4px;
+        
          border-bottom:1px solid #A8A8A8;
          background-color: #fff;
          }
-         .type-one-news h2 {
-    position: relative;
-}
+          h2.one-heading {
+          position: relative;
+          margin: 0 0 10px 0;
+          padding: 0;
+          }
 
-.more-option {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 0 10px;
-    color: red;
-    border-radius: 5px;
-    cursor: pointer;
-}
+         .more-option {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 0 10px;
+            color: red;
+            border-radius: 5px;
+            cursor: pointer;
+         }
          .one-news-img{
          position: relative;
          }
          h3.headline-container-TO {
-         font-size: 22px;
-         color: #333;
-         line-height: 32px;
-         padding-right:170px;
-         font-weight: 600;
+            min-height: 94px;
+    font-size: 18px;
+    color: #333;
+    line-height: 24px;
+    padding-right: 112px;
+    font-weight: 600;
+    margin: 0;
          }
          
          .img-container-TO {
          position: absolute;
          right: 0;
-         width: 160px;
+         width: 96px;
+         height: 64px;
          top: 0;
          display: inline-block;
          }
@@ -203,37 +213,33 @@
          width: 20px;
          }
          .img-container-TO span {
-         position: absolute;
-         right: 10px;
-         color: #fff;
-         background-color: #555555c2;
-         padding: 5px;
-         border-radius: 10px;
-         font-size: 12px;
-         z-index: 1;
-         bottom: 10px;
-         }
+    position: absolute;
+    right: 4px;
+    color: #fff;
+    background-color: #555555c2;
+    padding: 2px;
+    border-radius: 4px;
+    font-size: 10px;
+    z-index: 1;
+    bottom: 12px;
+    font-weight: 600;
+}
          /* type-one-news  */
          /* type-two-news */
+        
          .type-two-news {
          padding: 10px;
          margin: 15px 0px;
          background-color: #fff;
          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
          }
-         .type-two-news h2 {
-    position: relative;
-}
+        
+         h2.two-heading {
+          position: relative;
+          margin: 0 0 15px 0;
+          padding: 0;
+          }
 
-.more-option {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 0 10px;
-    color: red;
-    border-radius: 5px;
-    cursor: pointer;
-}
          .two-news-img{
          position: relative;
          border-bottom:1px solid #A8A8A8;
@@ -261,11 +267,12 @@
 
 
          .img-container-TW {
-         position: absolute;
-         right: 0;
-         width: 160px;
-         top: 0;
-         display: inline-block;
+            position: absolute;
+    right: 0;
+    width: 96px;
+    top: 0;
+    display: inline-block;
+    height: 64px;
          }
         
          .play-icon-TW {
@@ -289,7 +296,13 @@
          bottom: 10px;
          }
          /* type-two-news */
-         /* single-card-container */
+         /* photos-card-container */
+         .photos-section{
+            padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    margin: 20px 0;
+         }
          .photos-card-container{
             display:flex;
             width: auto;
@@ -313,13 +326,13 @@
          .photo-card-single h3{
             margin:10px 20px;
          }
-         /* single-card-container */
+         /* photos-card-container*/
          /* tabbing-section */
          .tabbing-section {
          padding: 10px;
          background-color: #fff;
          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-         border-bottom:2px solid #A8A8A8;
+         margin: 20px 0;
          }
      
     .tabs {
@@ -364,18 +377,6 @@
   height: auto;
   border-radius: 20px;
 }
-
-.overlay-img {
-    position: absolute;
-    bottom: 3px;
-    left: 0;
-    width: 100%;
-    height: 35%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0));
-    border-radius: 0 0 20px 20px;
-    z-index: 2;
-}
-
 .actual-img {
   width: 100%;
   height: 100%;
@@ -383,24 +384,134 @@
   border-radius: 20px;
 
 }
+.overlay-img {
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    width: 100%;
+    height: 35%;
+    background: linear-gradient(to top, rgba(0, 0, 0, .6), rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0));
+    border-radius: 0 0 20px 20px;
+    z-index: 2;
+}
 
-.overlay-text {
+
+
+h3.overlay-text {
   position: absolute;
    bottom: 10px;
   left: 3%;
   z-index: 3; 
   color: #fff;
-}
-
-.overlay-text h3 {
-  margin: 0; 
   font-size: 24px; 
+ margin: 0;
 }
 
-         /* tabbing-section */
+
+
+   /* tabbing-section */
+   /* Web Story Section */
+.web-story-section {
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    margin: 20px 0;
+}
+
+/* Web Stories Container */
+.webstories-container {
+    display: flex;
+    overflow-x: scroll;
+    background-color: #fff;
+}
+
+/* Web Stories Card */
+.webstories-card-single {
+    min-width: 132px;
+    width: 132px;
+    height: 232px;
+    margin: 10px 8px 10px 0;
+    border-radius: 8px;
+    margin-right: 10px;
+    position: relative;
+}
+
+.webstories-card-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.overlay-img-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 35%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.6));
+    border-radius: 8px 8px 0 0;
+}
+
+.overlay-text-ws {
+    position: absolute;
+    top: 10px;
+    z-index: 3;
+    color: #fff;
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+} 
+
+
+ .overlay-text-ws  h4,
+.overlay-text-ws  h6 {
+    font-size: 14px;
+    line-height: 18px;
+    margin: 0 4px;
+
+}
+.overlay-text-ws  h4{
+height: 54px;
+overflow: hidden;
+  margin-bottom: 5px; 
+} 
+
+.overlay-text-ws  h6 {
+   font-size: 12px;
+   background-color: #FF004D;
+   border-radius: 4px;
+   text-align: center;
+   padding: 4px 6px;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+}
+.play-icon-web{
+   position: absolute;
+         z-index: 1;
+         left: 50%;
+         top: 50%;
+         transform: translate(-50%, -50%);
+         height: 30px;
+         width: 30px;
+
+}
+.webstories-card-single span {
+         position: absolute;
+         right: 10px;
+         color: #fff;
+         background-color: #555555c2;
+         padding: 5px;
+         border-radius: 8px;
+         font-size: 13px;
+         z-index: 1;
+         bottom: 10px;
+         font-weight: 700;
+         }
       </style>
    </head>
    <body>
+      <!-- navbar-hm -->
       <section class="navbar-hm">
          <a href="#">
          <img src="https://odishatv.in/commondir/images/logo.svg" class="main-logo-img" alt="OdishaTV" title="OdishaTV" style="width: 250px; height: 65px;">
@@ -411,6 +522,8 @@
             
          </ul>
       </section>
+      <!-- navbar-hm -->
+      <!-- flex-menu-container -->
       <section class="flex-menu-container">
          <div class="static-menu">
             <p>Static</p>
@@ -455,6 +568,8 @@
             
          </ul>
       </section>
+      <!-- flex-menu-container -->
+      <!-- head-news -->
       <section class="head-news">
          <h1 class="headline-container"> <a href="#" class="live-button">Live</a> <a href="#">Lorem ipsum dolor sit amet tetur adipi elit. Exercitationem aliquam sunt eum, fugiat henderit id aperiam.</a> </h1>
          <div class="img-container-hm">
@@ -477,6 +592,8 @@
             </ul>
          </div>
       </section>
+      <!-- head-news -->
+      <!-- type-one-news -->
       <div class="type-one-news">
          <div class="one-news-img">
             <h3 class="headline-container-TO"><a href="#">Lorem ipsum dolor sit amet tetur adipi elit. Exercitationem aliquam sunt eum, fugiat henderit id aperiam.</a>  </h3>
@@ -616,10 +733,11 @@
             </ul>
          </div>
       </div>
-      
+      <!-- type-one-news -->
       <!-- type-one-news -->
       <!-- type-two-news -->
       <div class="type-two-news">
+         <h2 class="two-heading">Education </h2>
             <div class="two-news-img">
             <h3 class="headline-container-TO"> Lorem ipsum dolor sit amet tetur adipi elit. Exercitationem aliquam sunt eum, fugiat henderit id aperiam.</h3>
             <div class="img-container-TW">
@@ -651,7 +769,7 @@
       <!-- type-two-news -->
         <!-- education-tab -->
        <section class="tabbing-section">
-         <h2>Education </h2>
+         <h2 class="one-heading">Education <span class="more-option">More</span></h2>
          <ul class="tabs">
             <li class="tab" onclick="changeTab(1)">
               Tab 1
@@ -672,11 +790,36 @@
             <div class="image-container">
                <div class="overlay-img"></div>
                <img src="images/default.jpg" alt="Image" class="actual-img">
-               <div class="overlay-text">
-                 <h3>Your Text Goes Here</h3>
-               </div>
+                 <h3 class="overlay-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, mollitia.</h3>
              </div>
             </a>
+            <div class="type-one-news">
+               <div class="one-news-img">
+                  <h3 class="headline-container-TO"><a href="#">Lorem ipsum dolor sit amet tetur </a>  </h3>
+                  <div class="img-container-TO">
+                     <a href="#">
+                     <img src="images/default.jpg" alt="" class="headline-container-img">
+                     </a>
+                     
+                     <span>11:30</span>
+                  </div>
+               </div>
+               
+            </div>
+           
+            <div class="type-one-news">
+               <div class="one-news-img">
+                  <h3 class="headline-container-TO"><a href="#">Lorem ipsum dolorh3.headline-container-TOh3.headline-container-TO .</a>  </h3>
+                  <div class="img-container-TO">
+                     <a href="#">
+                     <img src="images/default.jpg" alt="" class="headline-container-img">
+                     </a>
+                     
+                     <span>11:30</span>
+                  </div>
+               </div>
+               
+            </div>
           </div>
           <div class="tab-content" id="tab2">
             Content for Tab 2
@@ -686,46 +829,117 @@
           </div>
       </section>
       <!-- education-tab -->
-      <!-- photo-card-section -->
-      <div class="type-one-news">
-         <h2>Education <span class="more-option">More</span></h2>
-         <div class="photos-card-container">
-            <div class="photo-card-single">
-               <img src="images/default.jpg" alt="">
-               <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt repellendus soluta maxime.</h3>
+       <!-- web-story-section  -->
+       <section class="web-story-section">
+         <h2 class="one-heading">Webstory <span class="more-option">More</span></h2>
+         <div class="webstories-container">
+            <a href="#">
+            <div class="webstories-card-single">
+               <div class="overlay-img-top"></div>
+                   <img src="images/p2.jpg" class="webstories-card-img">
+                  <div  class="overlay-text-ws">
+                     <h4>Lorem ipsum dolor  mollitia orem ipsum dolor  mollitia.</h4>
+                     <h6 >India News</h6>
+                  </div>
+                  <a href="#">
+                     <img src="images/video-icon-red.svg" alt="" class="play-icon-web">
+                  </a>
+                  <span>11:30</span>
             </div>
-            <div class="photo-card-single">
-               <img src="images/default.jpg" alt="">
-               <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt repellendus soluta maxime.</h3>
+            </a>
+            <a href="#">
+            <div class="webstories-card-single">
+               <div class="overlay-img-top"></div>
+                   <img src="images/p2.jpg" class="webstories-card-img">
+                  <div  class="overlay-text-ws ">
+                     <h4>Lorem ipsum dolor  mollitia orem ipsum dolor  mollitia.</h4>
+                     <h6 >India News</h6>
+                  </div>
+                  <a href="#">
+                     <img src="images/video-icon-red.svg" alt="" class="play-icon-web">
+                  </a>
+                  <span>11:30</span>
             </div>
-            <div class="photo-card-single">
-               <img src="images/default.jpg" alt="">
-               <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt repellendus soluta maxime.</h3>
+            </a>
+            <a href="#">
+            <div class="webstories-card-single">
+               <div class="overlay-img-top"></div>
+                   <img src="images/p2.jpg" class="webstories-card-img">
+                  <div  class="overlay-text-ws ">
+                     <h4>Lorem ipsum dolor  mollitia orem ipsum dolor  mollitia.</h4>
+                     <h6 >India News</h6>
+                  </div>
+                  <a href="#">
+                     <img src="images/video-icon-red.svg" alt="" class="play-icon-web">
+                  </a>
+                  <span>11:30</span>
             </div>
-            <div class="photo-card-single">
-               <img src="images/default.jpg" alt="">
-               <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt repellendus soluta maxime.</h3>
+            </a>
+            <a href="#">
+            <div class="webstories-card-single">
+               <div class="overlay-img-top"></div>
+                   <img src="images/p2.jpg" class="webstories-card-img">
+                  <div  class="overlay-text-ws ">
+                     <h4>Lorem ipsum dolor  mollitia orem ipsum dolor  mollitia.</h4>
+                     <h6 >India News</h6>
+                  </div>
+                  <a href="#">
+                     <img src="images/video-icon-red.svg" alt="" class="play-icon-web">
+                  </a>
+                  <span>11:30</span>
             </div>
+            </a>
+            
+           
+            
          </div>
-      </div>
+       </section>
+       <!-- web-story-section  -->
+      <!-- photo-card-section -->
+      <section class="photos-section">
+         <h2 class="one-heading">Education <span class="more-option">More</span></h2>
+         <div class="photos-card-container">
+            <a href="#">
+            <div class="photo-card-single">
+               <img src="images/default.jpg" alt="">
+               <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt repellendus soluta maxime.</h3>
+            </div>
+            </a>
+            <a href="#">
+            <div class="photo-card-single">
+               <img src="images/default.jpg" alt="">
+               <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt repellendus soluta maxime.</h3>
+            </div>
+            </a>
+            <a href="#">
+            <div class="photo-card-single">
+               <img src="images/default.jpg" alt="">
+               <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt repellendus soluta maxime.</h3>
+            </div>
+            </a>
+            <a href="#">
+            <div class="photo-card-single">
+               <img src="images/default.jpg" alt="">
+               <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt repellendus soluta maxime.</h3>
+            </div>
+            </a>
+            
+         </div>
+      </section>
       <!-- photo-card-section -->
     
    </body>
    <script>
-      // Set the first tab as the initially active tab
       document.getElementById('tab1').classList.add('active');
       document.querySelector('.tab:nth-child(1) .active-tab-bar').style.width = '100%';
   
       function changeTab(tabIndex) {
-        // Hide all tab contents
         document.querySelectorAll('.tab-content').forEach(content => {
           content.classList.remove('active');
         });
   
-        // Show the selected tab content
         document.getElementById('tab' + tabIndex).classList.add('active');
   
-        // Move the active tab bar
         const tabs = document.querySelectorAll('.tab');
         tabs.forEach((tab, index) => {
           const bar = tab.querySelector('.active-tab-bar');
@@ -736,6 +950,6 @@
           }
         });
       }
-    </script>
+   </script>
   
 </html>
