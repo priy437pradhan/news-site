@@ -314,6 +314,90 @@
             margin:10px 20px;
          }
          /* single-card-container */
+         /* tabbing-section */
+         .tabbing-section {
+         padding: 10px;
+         background-color: #fff;
+         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+         border-bottom:2px solid #A8A8A8;
+         }
+     
+    .tabs {
+      display: flex;
+      list-style: none;
+      padding: 0;
+    }
+
+    .tab {
+      flex: 1;
+      text-align: center;
+      padding: 10px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .tab:hover {
+      background-color: #f0f0f0;
+    }
+
+    .tab-content {
+      display: none;
+      
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .active-tab-bar {
+      height: 3px;
+      background-color: red;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width:0;
+    }
+    .image-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.overlay-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)); 
+  border-radius: 20px;
+  z-index: 2;
+}
+
+.actual-img {
+  width: 100%;
+  height: 100%;
+  z-index: 1; 
+  border-radius: 20px;
+
+}
+
+.overlay-text {
+  position: absolute;
+   bottom: 10px;
+  left: 3%;
+  z-index: 3; 
+  color: #fff;
+}
+
+.overlay-text h3 {
+  margin: 0; 
+  font-size: 24px; 
+}
+
+         /* tabbing-section */
       </style>
    </head>
    <body>
@@ -536,8 +620,7 @@
       <!-- type-one-news -->
       <!-- type-two-news -->
       <div class="type-two-news">
-         <h2>Education <span class="more-option">More</span></h2>
-         <div class="two-news-img">
+            <div class="two-news-img">
             <h3 class="headline-container-TO"> Lorem ipsum dolor sit amet tetur adipi elit. Exercitationem aliquam sunt eum, fugiat henderit id aperiam.</h3>
             <div class="img-container-TW">
                <img src="images/default.jpg" alt="" class="headline-container-img">
@@ -566,6 +649,43 @@
          </div>
       </div>
       <!-- type-two-news -->
+        <!-- education-tab -->
+        <section class="tabbing-section">
+         <h2>Education </h2>
+         <ul class="tabs">
+            <li class="tab" onclick="changeTab(1)">
+              Tab 1
+              <div class="active-tab-bar"></div>
+            </li>
+            <li class="tab" onclick="changeTab(2)">
+              Tab 2
+              <div class="active-tab-bar"></div>
+            </li>
+            <li class="tab" onclick="changeTab(3)">
+              Tab 3
+              <div class="active-tab-bar"></div>
+            </li>
+          </ul>
+        
+          <div class="tab-content active" id="tab1">
+            <a href="#">
+            <div class="image-container">
+               <div class="overlay-img"></div>
+               <img src="images/default.jpg" alt="Image" class="actual-img">
+               <div class="overlay-text">
+                 <h3>Your Text Goes Here</h3>
+               </div>
+             </div>
+            </a>
+          </div>
+          <div class="tab-content" id="tab2">
+            Content for Tab 2
+          </div>
+          <div class="tab-content" id="tab3">
+            Content for Tab 3
+          </div>
+          </section>
+      <!-- education-tab -->
       <!-- photo-card-section -->
       <div class="type-one-news">
          <h2>Education <span class="more-option">More</span></h2>
@@ -589,5 +709,33 @@
          </div>
       </div>
       <!-- photo-card-section -->
+    
    </body>
+   <script>
+      // Set the first tab as the initially active tab
+      document.getElementById('tab1').classList.add('active');
+      document.querySelector('.tab:nth-child(1) .active-tab-bar').style.width = '100%';
+  
+      function changeTab(tabIndex) {
+        // Hide all tab contents
+        document.querySelectorAll('.tab-content').forEach(content => {
+          content.classList.remove('active');
+        });
+  
+        // Show the selected tab content
+        document.getElementById('tab' + tabIndex).classList.add('active');
+  
+        // Move the active tab bar
+        const tabs = document.querySelectorAll('.tab');
+        tabs.forEach((tab, index) => {
+          const bar = tab.querySelector('.active-tab-bar');
+          if (index + 1 === tabIndex) {
+            bar.style.width = '100%';
+          } else {
+            bar.style.width = '0';
+          }
+        });
+      }
+    </script>
+  
 </html>
