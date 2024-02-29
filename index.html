@@ -46,38 +46,60 @@
          color: #333;
          }
          .static-menu {
+            display: flex;
+            align-items: center;
+            justify-content: center;
          padding: 10px;
          background-color: #eee;
          width: 100px;
          height: 40px;
          }
+         .static-menu P{
+            margin: 0 10px;
+            font-size: 16px;
+            font-weight:700;
+            color: #555;
+         }
          ul.scrolling-menu {
-         list-style-type: none;
-         margin: 0;
-         padding: 0;
-         display: flex;
-         overflow-x: auto;
-         }
-         ul.scrolling-menu li {
-         padding: 5px;
-         margin-right: 5px;
-         border-radius: 5px;
-         background-color: #fff;
-         display: flex;
-         align-items: center;
-         }
-         ul.scrolling-menu li img {
-         width: 15px;
-         height: 15px;
-         margin-right: 5px;
-         border-radius: 50%;
-         }
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    overflow-x: auto;
+}
+
+ul.scrolling-menu li {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    height: 30px;
+}
+
+ul.scrolling-menu li a {
+   height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ul.scrolling-menu li img {
+       width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+ul.scrolling-menu li h5 {
+      font-size: 20px;
+      color: #555;
+      text-transform: capitalize;
+      width: max-content;
+}
+
          /* flex-menu-container */
          /* live-section */
          .head-news {
          padding: 10px;
          background-color: #fff;
-         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
          border-bottom:2px solid #A8A8A8;
          }
          h1.headline-container {
@@ -92,6 +114,7 @@
          padding: 5px 10px;
          text-decoration: none;
          border-radius: 5px;
+         font-size: 20px;
          }
          .headline-container-img {
          width: 100%;
@@ -130,7 +153,8 @@
          .container-element {
          display: flex;
          justify-content: space-between;
-         padding: 4px 2px;
+         align-items: baseline;
+         padding: 4px 10px;
          border-radius: 10px;
          }
          p.left-element  {
@@ -145,22 +169,31 @@
          padding: 0;
          display: flex;
          }
-         ul.right-element li {
-         margin-right: 10px;
+         ul.right-element li:not(:last-child) {
+    height: 30px;
+    margin-right: 31px;
+}
+         ul.right-element li a {
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-self: center;
+
+         
          }
          ul.right-element li img {
          width: 20px;
-         height: 20px;
+        height: auto;
          margin-right: 5px;
-         border-radius: 50%;
          }
          /* live-section */
          /* type-one-news  */
-         .type-one-news {
+         .type-one-news{
          padding: 6px 4px 4px 4px;
-        
+         background-color: #fff; 
+         }
+         .type-one-news:not(:last-child)  {
          border-bottom:1px solid #A8A8A8;
-         background-color: #fff;
          }
           h2.one-heading {
           position: relative;
@@ -174,11 +207,13 @@
             right: 0;
             padding: 0 10px;
             color: red;
+            font-weight: 600;
             border-radius: 5px;
             cursor: pointer;
          }
          .one-news-img{
          position: relative;
+         padding: 5px 10px;
          }
          h3.headline-container-TO {
             min-height: 94px;
@@ -228,21 +263,21 @@
          /* type-two-news */
         
          .type-two-news {
-         padding: 10px;
-         margin: 15px 0px;
-         background-color: #fff;
-         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-         }
+    margin: 15px 0px;
+    padding: 10px 0 40px 0;
+    background-color: #fff;
+   
+
+}
         
          h2.two-heading {
           position: relative;
-          margin: 0 0 15px 0;
-          padding: 0;
+          margin: 0 0 0 15px;
           }
 
          .two-news-img{
-         position: relative;
-         border-bottom:1px solid #A8A8A8;
+            position: relative;
+    padding: 5px 10px 
 
 
          }
@@ -254,6 +289,7 @@
          font-weight: 600;
          position: relative;
          margin-bottom: 10px;
+         padding: 10px;
          }
          p.headline-container-TW::after {
   position: absolute;
@@ -300,7 +336,7 @@
          .photos-section{
             padding: 20px;
     background-color: #fff;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+   
     margin: 20px 0;
          }
          .photos-card-container{
@@ -316,22 +352,39 @@
     border-radius: 20px;
     border: 1px solid #eee;
     margin-right: 10px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2)
 
 }
          .photo-card-single img{
             width: 100%;
-            border-radius:20px 20px 0 0;
+            border-radius:10px 10px 0 0;
          }
          .photo-card-single h3{
             margin:10px 20px;
+            font-size: 18px;
+            line-height: 24px;
+            max-height: 72px;
+            height: 72px;
+
+         }
+         .icon-time{
+            display: flex;
+            align-items: center;
+            justify-self:first baseline;
+            margin: 30px 20px;
+            }
+            .icon-time img{
+               height: 35px;
+               width: 35px;
+               margin-right: 10px;
+            }
+         .icon-time p{
+            color: blue;
          }
          /* photos-card-container*/
          /* tabbing-section */
          .tabbing-section {
          padding: 10px;
          background-color: #fff;
-         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
          margin: 20px 0;
          }
      
@@ -414,7 +467,7 @@ h3.overlay-text {
 .web-story-section {
     padding: 20px;
     background-color: #fff;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+   
     margin: 20px 0;
 }
 
@@ -508,6 +561,19 @@ overflow: hidden;
          bottom: 10px;
          font-weight: 700;
          }
+         .end-more{
+            float:right;
+            height: 30px;
+            display: block;
+            margin:10px 20px;
+          
+         }
+         .end-more a{
+            color: #FF004D;
+            font-size: 22px;
+            font-weight: 500;
+            text-transform: capitalize;
+         }
       </style>
    </head>
    <body>
@@ -526,43 +592,45 @@ overflow: hidden;
       <!-- flex-menu-container -->
       <section class="flex-menu-container">
          <div class="static-menu">
-            <p>Static</p>
+            <img src="images/live-tv.png" alt="">
+            <p>TV</p>
          </div>
          <ul class="scrolling-menu">
+            
+            
             <li>
-               <img src="path/to/image1.jpg">
                <a href="#">
-               Item 1
+               <img src="images/world_cup.png">
+
+               <h5>item1</h5>
                </a>
             </li>
             <li>
-               <img src="path/to/image1.jpg">
                <a href="#">
-               Item 1
+               <img src="images/world_cup.png">
+
+               <h5>item1</h5>
                </a>
             </li>
             <li>
-               <img src="path/to/image1.jpg">
                <a href="#">
-               Item 1
+               <img src="images/world_cup.png">
+
+               <h5>item1</h5>
                </a>
             </li>
             <li>
-               <img src="path/to/image1.jpg">
                <a href="#">
-               Item 1
+               <img src="images/world_cup.png">
+
+               <h5>item1 cdd</h5>
                </a>
             </li>
             <li>
-               <img src="path/to/image1.jpg">
                <a href="#">
-               Item 1
-               </a>
-            </li>
-            <li>
-               <img src="path/to/image1.jpg">
-               <a href="#">
-               Item 1
+               <img src="images/world_cup.png">
+
+               <h5>item1</h5>
                </a>
             </li>
             
@@ -582,17 +650,23 @@ overflow: hidden;
             <p class="left-element">INDIA</p>
             <ul class="right-element">
                <li>
-                  <img src="path/to/image2.jpg">
-                  save
+                  <a href="#">
+                  <img src="images/share.png">
+                  share
+               </a>
                </li>
                <li>
-                  <img src="path/to/image2.jpg">
-                  share
+                  <a href="#">
+                     <img src="images/save.png">
+                     save
+                  </a>
                </li>
             </ul>
          </div>
       </section>
       <!-- head-news -->
+      <!-- listing-news-container -->
+      <div class="listing-news-container">
       <!-- type-one-news -->
       <div class="type-one-news">
          <div class="one-news-img">
@@ -611,139 +685,243 @@ overflow: hidden;
             <p class="left-element">INDIA</p>
             <ul class="right-element">
                <li>
-                  <img src="path/to/image2.jpg">
-                  save
-               </li>
-               <li>
-                  <img src="path/to/image2.jpg">
+                  <a href="#">
+                  <img src="images/share.png">
                   share
-               </li>
-            </ul>
-         </div>
-      </div>
-      </section>
-      <div class="type-one-news">
-         <div class="one-news-img">
-            <h3 class="headline-container-TO"><a href="#">Lorem ipsum dolor sit amet tetur adipi elit. Exercitationem aliquam sunt eum, fugiat henderit id aperiam.</a>  </h3>
-            <div class="img-container-TO">
-               <a href="#">
-               <img src="images/default.jpg" alt="" class="headline-container-img">
                </a>
-               <a href="#">
-               <img src="images/video-icon-red.svg" alt="" class="play-icon-TO">
-                </a>
-               <span>11:30</span>
-            </div>
-         </div>
-         <div class="container-element">
-            <p class="left-element">INDIA</p>
-            <ul class="right-element">
-               <li>
-                  <img src="path/to/image2.jpg">
-                  save
                </li>
                <li>
-                  <img src="path/to/image2.jpg">
-                  share
-               </li>
-            </ul>
-         </div>
-      </div>
-      </section>
-      <div class="type-one-news">
-         <div class="one-news-img">
-            <h3 class="headline-container-TO"><a href="#">Lorem ipsum dolor sit amet tetur adipi elit. Exercitationem aliquam sunt eum, fugiat henderit id aperiam.</a>  </h3>
-            <div class="img-container-TO">
-               <a href="#">
-               <img src="images/default.jpg" alt="" class="headline-container-img">
-               </a>
-               <a href="#">
-               <img src="images/video-icon-red.svg" alt="" class="play-icon-TO">
-                </a>
-               <span>11:30</span>
-            </div>
-         </div>
-         <div class="container-element">
-            <p class="left-element">INDIA</p>
-            <ul class="right-element">
-               <li>
-                  <img src="path/to/image2.jpg">
-                  save
-               </li>
-               <li>
-                  <img src="path/to/image2.jpg">
-                  share
-               </li>
-            </ul>
-         </div>
-      </div>
-      </section>
-      <div class="type-one-news">
-         <div class="one-news-img">
-            <h3 class="headline-container-TO"><a href="#">Lorem ipsum dolor sit amet tetur adipi elit. Exercitationem aliquam sunt eum, fugiat henderit id aperiam.</a>  </h3>
-            <div class="img-container-TO">
-               <a href="#">
-               <img src="images/default.jpg" alt="" class="headline-container-img">
-               </a>
-               <a href="#">
-               <img src="images/video-icon-red.svg" alt="" class="play-icon-TO">
-                </a>
-               <span>11:30</span>
-            </div>
-         </div>
-         <div class="container-element">
-            <p class="left-element">INDIA</p>
-            <ul class="right-element">
-               <li>
-                  <img src="path/to/image2.jpg">
-                  save
-               </li>
-               <li>
-                  <img src="path/to/image2.jpg">
-                  share
-               </li>
-            </ul>
-         </div>
-      </div>
-      </section>
-      <div class="type-one-news">
-         <div class="one-news-img">
-            <h3 class="headline-container-TO"><a href="#">Lorem ipsum dolor sit amet tetur adipi elit. Exercitationem aliquam sunt eum, fugiat henderit id aperiam.</a>  </h3>
-            <div class="img-container-TO">
-               <a href="#">
-               <img src="images/default.jpg" alt="" class="headline-container-img">
-               </a>
-               <a href="#">
-               <img src="images/video-icon-red.svg" alt="" class="play-icon-TO">
-                </a>
-               <span>11:30</span>
-            </div>
-         </div>
-         <div class="container-element">
-            <p class="left-element">INDIA</p>
-            <ul class="right-element">
-               <li>
-                  <img src="path/to/image2.jpg">
-                  save
-               </li>
-               <li>
-                  <img src="path/to/image2.jpg">
-                  share
+                  <a href="#">
+                     <img src="images/save.png">
+                     save
+                  </a>
                </li>
             </ul>
          </div>
       </div>
       <!-- type-one-news -->
+      <!-- type-one-news -->
+      <div class="type-one-news">
+         <div class="one-news-img">
+            <h3 class="headline-container-TO"><a href="#">Lorem ipsum dolor sit amet tetur adipi elit. Exercitationem aliquam sunt eum, fugiat henderit id aperiam.</a>  </h3>
+            <div class="img-container-TO">
+               <a href="#">
+               <img src="images/default.jpg" alt="" class="headline-container-img">
+               </a>
+               <a href="#">
+               <img src="images/video-icon-red.svg" alt="" class="play-icon-TO">
+                </a>
+               <span>11:30</span>
+            </div>
+         </div>
+         <div class="container-element">
+            <p class="left-element">INDIA</p>
+            <ul class="right-element">
+               <li>
+                  <a href="#">
+                  <img src="images/share.png">
+                  share
+               </a>
+               </li>
+               <li>
+                  <a href="#">
+                     <img src="images/save.png">
+                     save
+                  </a>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <!-- type-one-news -->
+      <!-- type-one-news -->
+      <div class="type-one-news">
+         <div class="one-news-img">
+            <h3 class="headline-container-TO"><a href="#">Lorem ipsum dolor sit amet tetur adipi elit. Exercitationem aliquam sunt eum, fugiat henderit id aperiam.</a>  </h3>
+            <div class="img-container-TO">
+               <a href="#">
+               <img src="images/default.jpg" alt="" class="headline-container-img">
+               </a>
+               <a href="#">
+               <img src="images/video-icon-red.svg" alt="" class="play-icon-TO">
+                </a>
+               <span>11:30</span>
+            </div>
+         </div>
+         <div class="container-element">
+            <p class="left-element">INDIA</p>
+            <ul class="right-element">
+               <li>
+                  <a href="#">
+                  <img src="images/share.png">
+                  share
+               </a>
+               </li>
+               <li>
+                  <a href="#">
+                     <img src="images/save.png">
+                     save
+                  </a>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <!-- type-one-news -->
+      <!-- type-one-news -->
+      <div class="type-one-news">
+         <div class="one-news-img">
+            <h3 class="headline-container-TO"><a href="#">Lorem ipsum dolor sit amet tetur adipi elit. Exercitationem aliquam sunt eum, fugiat henderit id aperiam.</a>  </h3>
+            <div class="img-container-TO">
+               <a href="#">
+               <img src="images/default.jpg" alt="" class="headline-container-img">
+               </a>
+               <a href="#">
+               <img src="images/video-icon-red.svg" alt="" class="play-icon-TO">
+                </a>
+               <span>11:30</span>
+            </div>
+         </div>
+         <div class="container-element">
+            <p class="left-element">INDIA</p>
+            <ul class="right-element">
+               <li>
+                  <a href="#">
+                  <img src="images/share.png">
+                  share
+               </a>
+               </li>
+               <li>
+                  <a href="#">
+                     <img src="images/save.png">
+                     save
+                  </a>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <!-- type-one-news -->
+      <!-- type-one-news -->
+      <div class="type-one-news">
+         <div class="one-news-img">
+            <h3 class="headline-container-TO"><a href="#">Lorem ipsum dolor sit amet tetur adipi elit. Exercitationem aliquam sunt eum, fugiat henderit id aperiam.</a>  </h3>
+            <div class="img-container-TO">
+               <a href="#">
+               <img src="images/default.jpg" alt="" class="headline-container-img">
+               </a>
+               <a href="#">
+               <img src="images/video-icon-red.svg" alt="" class="play-icon-TO">
+                </a>
+               <span>11:30</span>
+            </div>
+         </div>
+         <div class="container-element">
+            <p class="left-element">INDIA</p>
+            <ul class="right-element">
+               <li>
+                  <a href="#">
+                  <img src="images/share.png">
+                  share
+               </a>
+               </li>
+               <li>
+                  <a href="#">
+                     <img src="images/save.png">
+                     save
+                  </a>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <!-- type-one-news -->
+      <!-- type-one-news -->
+      <div class="type-one-news">
+         <div class="one-news-img">
+            <h3 class="headline-container-TO"><a href="#">Lorem ipsum dolor sit amet tetur adipi elit. Exercitationem aliquam sunt eum, fugiat henderit id aperiam.</a>  </h3>
+            <div class="img-container-TO">
+               <a href="#">
+               <img src="images/default.jpg" alt="" class="headline-container-img">
+               </a>
+               <a href="#">
+               <img src="images/video-icon-red.svg" alt="" class="play-icon-TO">
+                </a>
+               <span>11:30</span>
+            </div>
+         </div>
+         <div class="container-element">
+            <p class="left-element">INDIA</p>
+            <ul class="right-element">
+               <li>
+                  <a href="#">
+                  <img src="images/share.png">
+                  share
+               </a>
+               </li>
+               <li>
+                  <a href="#">
+                     <img src="images/save.png">
+                     save
+                  </a>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <!-- type-one-news -->
+      <!-- type-one-news -->
+      <div class="type-one-news">
+         <div class="one-news-img">
+            <h3 class="headline-container-TO"><a href="#">Lorem ipsum dolor sit amet tetur adipi elit. Exercitationem aliquam sunt eum, fugiat henderit id aperiam.</a>  </h3>
+            <div class="img-container-TO">
+               <a href="#">
+               <img src="images/default.jpg" alt="" class="headline-container-img">
+               </a>
+               <a href="#">
+               <img src="images/video-icon-red.svg" alt="" class="play-icon-TO">
+                </a>
+               <span>11:30</span>
+            </div>
+         </div>
+         <div class="container-element">
+            <p class="left-element">INDIA</p>
+            <ul class="right-element">
+               <li>
+                  <a href="#">
+                  <img src="images/share.png">
+                  share
+               </a>
+               </li>
+               <li>
+                  <a href="#">
+                     <img src="images/save.png">
+                     save
+                  </a>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <!-- type-one-news -->
+      </div>
+       <!-- listing-news-container -->
+
+      
+      
       <!-- type-one-news -->
       <!-- type-two-news -->
-      <div class="type-two-news">
+      <section class="type-two-news">
          <h2 class="two-heading">Education </h2>
-            <div class="two-news-img">
-            <h3 class="headline-container-TO"> Lorem ipsum dolor sit amet tetur adipi elit. Exercitationem aliquam sunt eum, fugiat henderit id aperiam.</h3>
-            <div class="img-container-TW">
-               <img src="images/default.jpg" alt="" class="headline-container-img">
-              
+         <div class="type-one-news">
+            <div class="one-news-img">
+               <h3 class="headline-container-TO"><a href="#">Lorem ipsum dolor sit amet tetur adipi elit. Exercitationem aliquam sunt eum, fugiat henderit id aperiam.</a>  </h3>
+               <div class="img-container-TO">
+                  <a href="#">
+                  <img src="images/default.jpg" alt="" class="headline-container-img">
+                  </a>
+                  <a href="#">
+                  <img src="images/video-icon-red.svg" alt="" class="play-icon-TO">
+                   </a>
+                  <span>11:30</span>
+               </div>
             </div>
+           
+         </div>
          </div>
          <div class="type-two-news-list">
             <p class="headline-container-TW"> Lorem ipsum dolor sit amet tetur adipi elit. Exercitationem aliquam sunt eum, fugiat henderit id aperiam.</p>
@@ -756,16 +934,21 @@ overflow: hidden;
             <p class="left-element">INDIA</p>
             <ul class="right-element">
                <li>
-                  <img src="path/to/image2.jpg">
-                  save
+                  <a href="#">
+                  <img src="images/share.png">
+                  share
+               </a>
                </li>
                <li>
-                  <img src="path/to/image2.jpg">
-                  share
+                  <a href="#">
+                     <img src="images/save.png">
+                     save
+                  </a>
                </li>
             </ul>
          </div>
-      </div>
+         <div class="end-more"> <a href="#">more</a></div>
+      </section>
       <!-- type-two-news -->
         <!-- education-tab -->
        <section class="tabbing-section">
@@ -903,30 +1086,97 @@ overflow: hidden;
             <div class="photo-card-single">
                <img src="images/default.jpg" alt="">
                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt repellendus soluta maxime.</h3>
+               <div class="icon-time">
+                  <img src="images/photo.svg" alt="">
+                  <p>3:04</p>
+               </div>
             </div>
             </a>
             <a href="#">
             <div class="photo-card-single">
                <img src="images/default.jpg" alt="">
                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt repellendus soluta maxime.</h3>
+               <div class="icon-time">
+                  <img src="images/photo.svg" alt="">
+                  <p>3:04</p>
+               </div>
             </div>
             </a>
             <a href="#">
             <div class="photo-card-single">
                <img src="images/default.jpg" alt="">
                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt repellendus soluta maxime.</h3>
+               <div class="icon-time">
+                  <img src="images/photo.svg" alt="">
+                  <p>3:04</p>
+               </div>
             </div>
             </a>
             <a href="#">
             <div class="photo-card-single">
                <img src="images/default.jpg" alt="">
                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt repellendus soluta maxime.</h3>
+               <div class="icon-time">
+                  <img src="images/photo.svg" alt="">
+                  <p>3:04</p>
+               </div>
             </div>
             </a>
+           
             
          </div>
       </section>
       <!-- photo-card-section -->
+    
+      <!-- video-card-section -->
+      <section class="photos-section">
+         <h2 class="one-heading">Education <span class="more-option">More</span></h2>
+         <div class="photos-card-container">
+            <a href="#">
+            <div class="photo-card-single">
+               <img src="images/default.jpg" alt="">
+               <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt repellendus soluta maxime.</h3>
+               <div class="icon-time">
+                  <img src="images/video.png" alt="">
+                  <p>3:04</p>
+               </div>
+            </div>
+            </a>
+            <a href="#">
+            <div class="photo-card-single">
+               <img src="images/default.jpg" alt="">
+               <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt repellendus soluta maxime.</h3>
+               <div class="icon-time">
+                  <img src="images/video.png" alt="">
+                  <p>3:04</p>
+               </div>
+            </div>
+            </a>
+            <a href="#">
+            <div class="photo-card-single">
+               <img src="images/default.jpg" alt="">
+               <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt repellendus soluta maxime.</h3>
+               <div class="icon-time">
+                  <img src="images/video.png" alt="">
+                  <p>3:04</p>
+               </div>
+            </div>
+            </a>
+            <a href="#">
+            <div class="photo-card-single">
+               <img src="images/default.jpg" alt="">
+               <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt repellendus soluta maxime.</h3>
+               <div class="icon-time">
+                  <img src="images/video.png" alt="">
+                  <p>3:04</p>
+               </div>
+            </div>
+            </a>
+           
+            
+         </div>
+      </section>
+      <!-- video-card-section -->
     
    </body>
    <script>
