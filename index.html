@@ -45,14 +45,13 @@
          background-color: #fff;
          color: #333;
          }
-         .static-menu {
+         .static-menu a {
             display: flex;
             align-items: center;
             justify-content: center;
          padding: 10px;
          background-color: #eee;
-         width: 100px;
-         height: 40px;
+         width: fit-content;
          }
          .static-menu P{
             margin: 0 10px;
@@ -100,7 +99,7 @@ ul.scrolling-menu li h5 {
          .head-news {
          padding: 10px;
          background-color: #fff;
-         border-bottom:2px solid #A8A8A8;
+         border-bottom:.5px solid #A8A8A8;
          }
          h1.headline-container {
          font-size: 24px;
@@ -193,24 +192,33 @@ ul.scrolling-menu li h5 {
          background-color: #fff; 
          }
          .type-one-news:not(:last-child)  {
-         border-bottom:1px solid #A8A8A8;
+         border-bottom:.5px solid #A8A8A8;
          }
-          h2.one-heading {
-          position: relative;
-          margin: 0 0 10px 0;
-          padding: 0;
-          }
+         .one-heading {
+    position: relative;
+    margin: 0 0 10px 0;
+    padding: 0;
+    display: flex;
+    align-items: center; 
+}
 
-         .more-option {
-            position: absolute;
-            top: 0;
-            right: 0;
-            padding: 0 10px;
-            color: red;
-            font-weight: 600;
-            border-radius: 5px;
-            cursor: pointer;
-         }
+.heading-icon {
+    width: 30px;
+    height: 30px; 
+    margin-right: 10px; 
+}
+
+.more-option {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 18px;
+    padding: 0 10px;
+    color: red;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
          .one-news-img{
          position: relative;
          padding: 5px 10px;
@@ -362,20 +370,21 @@ ul.scrolling-menu li h5 {
             margin:10px 20px;
             font-size: 18px;
             line-height: 24px;
-            max-height: 72px;
-            height: 72px;
+            max-height: 80px;
+            height: 80px;
 
          }
          .icon-time{
             display: flex;
             align-items: center;
             justify-self:first baseline;
-            margin: 30px 20px;
+            margin: 15px 20px;
             }
             .icon-time img{
-               height: 35px;
-               width: 35px;
-               margin-right: 10px;
+               height: 25px;
+    width: 25px;
+    margin-right: 10px;
+    border-radius: 0;
             }
          .icon-time p{
             color: blue;
@@ -570,7 +579,7 @@ overflow: hidden;
          }
          .end-more a{
             color: #FF004D;
-            font-size: 22px;
+            font-size: 18px;
             font-weight: 500;
             text-transform: capitalize;
          }
@@ -592,8 +601,10 @@ overflow: hidden;
       <!-- flex-menu-container -->
       <section class="flex-menu-container">
          <div class="static-menu">
+            <a href="#">
             <img src="images/live-tv.png" alt="">
             <p>TV</p>
+         </a>
          </div>
          <ul class="scrolling-menu">
             
@@ -906,7 +917,8 @@ overflow: hidden;
       <!-- type-one-news -->
       <!-- type-two-news -->
       <section class="type-two-news">
-         <h2 class="two-heading">Education </h2>
+         <h2 class="two-heading"> <img src="images/science.png" alt="Icon" class="heading-icon">
+            Education</h2>
          <div class="type-one-news">
             <div class="one-news-img">
                <h3 class="headline-container-TO"><a href="#">Lorem ipsum dolor sit amet tetur adipi elit. Exercitationem aliquam sunt eum, fugiat henderit id aperiam.</a>  </h3>
@@ -952,7 +964,12 @@ overflow: hidden;
       <!-- type-two-news -->
         <!-- education-tab -->
        <section class="tabbing-section">
-         <h2 class="one-heading">Education <span class="more-option">More</span></h2>
+         <h2 class="one-heading">
+            <img src="images/science.png" alt="Icon" class="heading-icon">
+            Education
+            <span class="more-option">More</span>
+        </h2>
+        
          <ul class="tabs">
             <li class="tab" onclick="changeTab(1)">
               Tab 1
@@ -1014,7 +1031,11 @@ overflow: hidden;
       <!-- education-tab -->
        <!-- web-story-section  -->
        <section class="web-story-section">
-         <h2 class="one-heading">Webstory <span class="more-option">More</span></h2>
+         <h2 class="one-heading">
+            <img src="images/science.png" alt="Icon" class="heading-icon">
+            Education
+            <span class="more-option">More</span>
+        </h2>
          <div class="webstories-container">
             <a href="#">
             <div class="webstories-card-single">
@@ -1080,7 +1101,11 @@ overflow: hidden;
        <!-- web-story-section  -->
       <!-- photo-card-section -->
       <section class="photos-section">
-         <h2 class="one-heading">Education <span class="more-option">More</span></h2>
+         <h2 class="one-heading">
+            <img src="images/science.png" alt="Icon" class="heading-icon">
+            Education
+            <span class="more-option">More</span>
+        </h2>
          <div class="photos-card-container">
             <a href="#">
             <div class="photo-card-single">
@@ -1130,7 +1155,11 @@ overflow: hidden;
     
       <!-- video-card-section -->
       <section class="photos-section">
-         <h2 class="one-heading">Education <span class="more-option">More</span></h2>
+         <h2 class="one-heading">
+            <img src="images/science.png" alt="Icon" class="heading-icon">
+            Education
+            <span class="more-option">More</span>
+        </h2>
          <div class="photos-card-container">
             <a href="#">
             <div class="photo-card-single">
