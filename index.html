@@ -3,6 +3,8 @@
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+
       <title>Hindustan-media</title>
       <style>
          * {
@@ -37,6 +39,9 @@
          }
          ul.more-icons-hm li {
          display: inline-block;
+         }
+         ul.more-icons-hm :not(:last-child) {
+            margin-right: 10px;
          }
          /* navbar-hm */
          /* flex-menu-container */
@@ -122,7 +127,6 @@ ul.scrolling-menu li h5 {
          }
          .img-container-hm {
          position: relative;
-         display: inline-block;
          }
          .headline-container-img {
          max-width: 100%;
@@ -583,17 +587,67 @@ overflow: hidden;
             font-weight: 500;
             text-transform: capitalize;
          }
+         /* footer */
+         body {
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  background-color:#fff;
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  color: #333; 
+  margin-top: 35px;
+  z-index: 100;
+}
+
+
+.footer-menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; 
+ 
+}
+
+.footer-menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-menu-item a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer-menu-item img {
+  width: 40px; 
+  height: 40px;
+  margin: 5px;
+}
+
+.footer-menu-item span {
+  margin-top: 5px;
+  font-size: 16px; 
+}
+
+         /* footer */
       </style>
    </head>
    <body>
       <!-- navbar-hm -->
-      <section class="navbar-hm">
+      <section class="navbar-hm" id="navbar-hm">
          <a href="#">
          <img src="https://odishatv.in/commondir/images/logo.svg" class="main-logo-img" alt="OdishaTV" title="OdishaTV" style="width: 250px; height: 65px;">
       </a>
          <ul class="more-icons-hm">
-            <li><a href="#">dd</a></li>
-            <li><a href="#">dd</a></li>
+            <li><a href="#"><i class="fas fa-user"></i></a></li>
+            <li><a href="#"><i class="fas fa-ellipsis-v"></i>
+            </a></li>
             
          </ul>
       </section>
@@ -917,10 +971,8 @@ overflow: hidden;
       <!-- type-one-news -->
       <!-- type-two-news -->
       <section class="type-two-news">
-         <h2 class="one-heading">
-            <img src="images/science.png" alt="Icon" class="heading-icon">
-            Education
-        </h2>
+         <h2 class="two-heading"> <img src="images/science.png" alt="Icon" class="heading-icon">
+            Education</h2>
          <div class="type-one-news">
             <div class="one-news-img">
                <h3 class="headline-container-TO"><a href="#">Lorem ipsum dolor sit amet tetur adipi elit. Exercitationem aliquam sunt eum, fugiat henderit id aperiam.</a>  </h3>
@@ -1208,7 +1260,26 @@ overflow: hidden;
          </div>
       </section>
       <!-- video-card-section -->
-    
+      <footer>
+         <div class="footer-menu">
+           <div class="footer-menu-item">
+             <a href="#"><img src="icon1.png" alt="Icon 1"></a>
+             <span>Home</span>
+           </div>
+           <div class="footer-menu-item">
+             <a href="#"><img src="icon2.png" alt="Icon 2"></a>
+             <span>City</span>
+           </div>
+           <div class="footer-menu-item">
+             <a href="#"><img src="icon3.png" alt="Icon 3"></a>
+             <span>Video</span>
+           </div>
+           <div class="footer-menu-item">
+             <a href="#"><img src="icon4.png" alt="Icon 4"></a>
+             <span>Menu</span>
+           </div>
+         </div>
+       </footer>
    </body>
    <script>
       document.getElementById('tab1').classList.add('active');
@@ -1232,5 +1303,5 @@ overflow: hidden;
         });
       }
    </script>
-  
+     
 </html>
