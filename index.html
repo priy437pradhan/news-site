@@ -348,9 +348,11 @@ ul.scrolling-menu li h5 {
          .photos-section{
             padding: 20px;
     background-color: #fff;
-   
     margin: 20px 0;
+   
+    
          }
+         
          .photos-card-container{
             display:flex;
             width: auto;
@@ -594,13 +596,13 @@ overflow: hidden;
   background-color: #fff;
   text-align: center;
   width: 100%;
-  position: fixed;
+  height: 80px;
+  position: sticky;
   left: 0;
   bottom: 0;
-  color: #333; 
-  margin-top: 35px;
+  color: #333;
   z-index: 100;
-  padding: 10px 0;
+  padding: 10px 0; 
 }
 
 .footer-menu {
@@ -632,9 +634,7 @@ overflow: hidden;
   font-size: 16px; 
 }
 
-.footer-menu-item.active img {
-  /* Add styles for the active state, e.g., border or background color */
-}
+
 
 
          /* footer */
@@ -998,23 +998,7 @@ overflow: hidden;
          </div>
          
 
-         <div class="container-element">
-            <p class="left-element">INDIA</p>
-            <ul class="right-element">
-               <li>
-                  <a href="#">
-                  <img src="images/share.png">
-                  share
-               </a>
-               </li>
-               <li>
-                  <a href="#">
-                     <img src="images/save.png">
-                     save
-                  </a>
-               </li>
-            </ul>
-         </div>
+         
          <div class="end-more"> <a href="#">more</a></div>
       </section>
       <!-- type-two-news -->
@@ -1262,26 +1246,27 @@ overflow: hidden;
          </div>
       </section>
       <!-- video-card-section -->
+     
       <footer>
          <div class="footer-menu">
-           <div class="footer-menu-item active" onclick="changeIcon(1)">
-             <a href="#"><img src="images/home-active.png" alt="Icon 1"></a>
-             <span>Home</span>
-           </div>
-           <div class="footer-menu-item" onclick="changeIcon(2)">
-             <a href="#"><img src="images/city-inactive.png" alt="Icon 2"></a>
-             <span>City</span>
-           </div>
-           <div class="footer-menu-item" onclick="changeIcon(3)">
-             <a href="#"><img src="images/video-inactive-icon.png" alt="Icon 3"></a>
-             <span>Video</span>
-           </div>
-           <div class="footer-menu-item" onclick="changeIcon(4)">
-             <a href="#"><img src="images/menu-inactive.png" alt="Icon 4"></a>
-             <span>Menu</span>
-           </div>
+             <div class="footer-menu-item active" onclick="changeIcon(1)">
+               <a href="#"><img src="images/home-active.png" alt="Icon 1"></a>
+                 <span>Home</span>
+             </div>
+             <div class="footer-menu-item" onclick="changeIcon(2)">
+               <a href="#"><img src="images/city-inactive.png" alt="Icon 2"></a>
+                 <span>City</span>
+             </div>
+             <div class="footer-menu-item" onclick="changeIcon(3)">
+               <a href="#"><img src="images/video-inactive-icon.png" alt="Icon 3"></a>
+                 <span>Video</span>
+             </div>
+             <div class="footer-menu-item" onclick="changeIcon(4)">
+               <a href="#"><img src="images/menu-inactive.png" alt="Icon 4"></a>
+                 <span>Menu</span>
+             </div>
          </div>
-       </footer>
+     </footer>
    </body>
    <script>
       document.getElementById('tab1').classList.add('active');
@@ -1305,16 +1290,10 @@ overflow: hidden;
         });
       }
 
-      function changeIcon(index) {
-  
-  document.querySelectorAll('.footer-menu-item').forEach(item => {
-    item.classList.remove('active');
-  });
-
-  
-  document.querySelector(`.footer-menu-item:nth-child(${index})`).classList.add('active');
-}
+     
 
    </script>
+
+
      
 </html>
